@@ -1,0 +1,66 @@
+Projekt: Aurora
+
+Baza danych: Aurora.Data
+
+Tabela: "Aurora"
+Opis kolumn:
+	1.  id				- int 				- numer identyfikacyjny zlecenia
+	2.  userID			- int				- numer identyfikacyjny zlecającego (nie może być puste)
+	3.  title 			- varchar(MAX)		- tytuł zlecenia (nie może być puste)
+	4.  description 	- varchar(MAX)		- krótki opis zlecenia (nie może być puste)
+	5.  date			- datetime			- data startu zlecenia (nie może być puste)
+	6.  acceptStatus	- bit				- czy dane zlecenie jest zaakceptowane przez administrację (true/false) (domyślnie false) (opcja domyślnie ukryta)
+	7.  place			- varchar(MAX)		- miejscowość (bądź gmina), w której dane zlecenie będzie wykonywane (nie może być puste)
+	8.  jobLength		- int				- (id z tabeli "jobLength") przybliżona długość / jak długo dane zlecenie może być wykonywane (może być puste, ale powinno być uzgodnione później z wykonawcą) (jest wybierane na podstawie tabeli "jobLength")
+	9.  jobWorkers		- int				- ilu ludzi jest potrzebne do wykonania zlecenia (nie może być puste)
+	10. phone			- varchar(9)		- numer telefonu zlecającego (nie może być puste)
+	11. name			- varchar(50)		- imię zlecającego (nie może być puste) (checkbox czy puste) (checkbox, czy zapamiętać do tabeli "names")
+	12. timeLenght		- int				- (id z tabeli "timeLength") jak długo zlecenie ma być w bazie (na podstawie tabeli "timeLength") (nie może być puste)
+	13. jobEnd			- datetime			- kiedy zlecenie zostanie ukryte (nie może być puste)
+	14. jobHidden		- bit				- czy zlecenie jest ukryte (true/false) (kiedy użytkownik sam wybierze / kiedy czas zlecenia się skończy) (domyślnie false) (opcja domyślnie ukryta) (nie może być puste)
+	15. jobDone			- bit				- czy zlecenie wykonano (true/false) (domyślnie false) (nie może być puste)
+	
+	
+Tabela: "jobLength"
+Opis kolumn:
+	1.  id 				- int				- numer identyfikacyjny 
+	2.  length			- varchar(MAX)		- długość zlecenia (np. "ustalę później z wykonawcą", "krócej niż 1h", "1-2h", "2-3h", "ponad 4h")
+	
+
+Tabela: "timeLength"
+Opis kolumn:
+	1.  id				- int				- numer identyfikacyjny 
+	2.  length			- varchar(MAX)		- jak długo zlecenie ma być w bazie (np. "7 dni", "14 dni", "3 tygodnie", "4 tygodnie")
+	3.  pricing			- float				- cena za długość zlecenia
+	
+
+Tabela: "paymentPlan"
+Opis kolumn:
+	1.  id				- int				- numer identyfikacyjny 
+	2.  userID			- int				- numer identyfikacyjny zlecającego (nie może być puste)
+	3.  AuroraID		- int				- ID z "Aurora"
+	3.  timeLengthID	- int				- ID z "timeLength"
+	
+Tabela: "names"	
+Opis kolumn:
+	1.  id				- int				- numer identyfikacyjny 
+	2.  userID			- int				- numer identyfikacyjny zlecającego (nie może być puste)
+	3.  name			- varchar(50)		- imię zlecającego
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

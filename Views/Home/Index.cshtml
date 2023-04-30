@@ -1,0 +1,20 @@
+﻿@*@model IEnumerable<ViewBag.AuroraModel>*@
+@model IEnumerable<Aurora.Models.AuroraModel2>
+
+@{
+    ViewData["Title"] = "Home Page";
+    //List<AuroraModel2> list = ViewBag.AuroraModel;
+    //var list = (List<AuroraModel2>)ViewBag.AuroraModel;
+    var list = ViewBag.AuroraModel;
+}
+
+@*<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>*@
+
+
+@*<div>@list</div>*@
+
+@list.Title
+
