@@ -1,5 +1,6 @@
 ﻿@*@model IEnumerable<ViewBag.AuroraModel>*@
 @model IEnumerable<Aurora.Models.AuroraModel2>
+@using Newtonsoft.Json
 
 @{
     ViewData["Title"] = "Home Page";
@@ -16,5 +17,30 @@
 
 @*<div>@list</div>*@
 
+@*<div class="newA_Span">Najnowsze ogłoszenia:</div>*@
+<div class="newA_Parent">
+    @foreach(var item in list)
+    {
+        @*<div>@item.Description</div>*@
+        <div class="newA">
+            @*<div>@item.Title</div>
+            <div>@item.Description</div>*@
+        </div>
+    }
+</div>
+
+
+
 @*@list.Title*@
 
+<script type="text/javascript">
+
+    var model = @Html.Raw(JsonConvert.SerializeObject(ViewBag.AuroraModel));
+    console.log(model);
+
+    //dodaj do divow titles i desriptions
+    //
+    //
+    
+
+</script>

@@ -24,7 +24,7 @@ namespace Aurora.Models
         public DateTime Date { get; set; }
 
         [Required(ErrorMessage = "Pole nie może być puste!")]
-        [Display(Name = "Miejscowość")]
+        [Display(Name = "Miejscowość (Opcjonalne)")]
         public string? Place { get; set; }
 
         [Required(ErrorMessage = "Należy wybrać jedną z opcji!")]
