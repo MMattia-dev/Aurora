@@ -6,7 +6,7 @@
     ViewData["Title"] = "Home Page";
     //List<AuroraModel2> list = ViewBag.AuroraModel;
     //var list = (List<AuroraModel2>)ViewBag.AuroraModel;
-    var list = ViewBag.AuroraModel;
+    //var list = ViewBag.AuroraModel;
 }
 
 @*<div class="text-center">
@@ -19,12 +19,26 @@
 
 @*<div class="newA_Span">Najnowsze ogłoszenia:</div>*@
 <div class="newA_Parent">
-    @foreach(var item in list)
+    @foreach(var item in ((IEnumerable<AuroraModel2>)ViewBag.AuroraModel).OrderByDescending(x => x.Date))
     {
         @*<div>@item.Description</div>*@
-        <div class="newA">
+        <div class="newA" name="@item.Id">
             @*<div>@item.Title</div>
             <div>@item.Description</div>*@
+            <div id="newA_Title">
+                <span>@item.Title</span>
+                <span>@item.Date.ToString("yyyy.MM.dd")</span>
+            </div>
+            <div class="divider"></div>
+            <div id="newA_Description"></div>
+
+            @*<div class="fader"></div>*@
+
+            <div id="newA_City">
+                <div class="divider2"></div>
+                <span>@item.Place.Split('(')[0]</span>
+            </div>
+
         </div>
     }
 </div>
@@ -34,13 +48,27 @@
 @*@list.Title*@
 
 <script type="text/javascript">
-
     var model = @Html.Raw(JsonConvert.SerializeObject(ViewBag.AuroraModel));
-    console.log(model);
-
-    //dodaj do divow titles i desriptions
-    //
-    //
     
+    var newA_Elements = document.querySelectorAll(".newA");
+    for(let i = 0; i < newA_Elements.length; i++){
+        for(let j = 0; j < model.length; j++){
+            if(model[j].Id == newA_Elements[i].getAttribute('name')){
+                newA_Elements[i].getElementsByTagName('div')[2].innerHTML = model[j].Description;
+            }
+        }
+    }
+
+
+
+    //var description = document.getElementById("newA_Description");
+    
+    //for(let i = 0; i < description.length; i++){
+    //    var lht = parseInt($(description[i]).css('lineHeight'), 10);
+    //    var lines = $(description[i]).attr('scrollHeight') / lht;
+    //    console.log(lines);
+    //}
+
+
 
 </script>

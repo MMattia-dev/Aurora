@@ -26,6 +26,10 @@ namespace Aurora.Controllers
         public IActionResult Index()
         {
             ViewBag.AuroraModel = _context.AuroraModel2;
+            //List<AuroraModel2> am = (List<AuroraModel2>)new List<AuroraModel2>().OrderByDescending(x => x.Date);
+            //ViewBag.AuroraModel = am;
+
+
             //Session[""] = _context.AuroraModel2;
 
             //AuroraModel2 model = new AuroraModel2();
