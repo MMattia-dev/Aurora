@@ -16,22 +16,18 @@ html {
 html {
     position: relative;
     min-height: 100%;
-    /*background-color: #22311d;*/
-    /*background: url(https://img.freepik.com/premium-photo/nature-green-leaf-garden-summer-natural-green-leaves-plants-using-as-spring-background-cover-page-greenery-environment-ecology-wallpaper_103077-222.jpg?w=900) no-repeat fixed;
+    background: url(https://wallpaperbat.com/img/70483-island-night-ultra-hd-desktop-background-wallpaper-for-4k-uhd-tv.jpg) no-repeat fixed center;
     background-size: cover;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);*/
-    /*backdrop-filter: brightness(50%);*/
-
-    /*overflow-x: hidden;*/
+/*    backdrop-filter: brightness(50%);
+    -webkit-backdrop-filter: brightness(50%);*/
 }
 
 body {
-    /*background-color: #22311d;*/
-    background: url(https://img.freepik.com/premium-photo/nature-green-leaf-garden-summer-natural-green-leaves-plants-using-as-spring-background-cover-page-greenery-environment-ecology-wallpaper_103077-222.jpg?w=900) no-repeat fixed;
-    background-size: cover;
-    /*background-position: top left;*/
-    /*backdrop-filter: brightness(70%);*/
+    /*background: url(https://img.freepik.com/premium-photo/nature-green-leaf-garden-summer-natural-green-leaves-plants-using-as-spring-background-cover-page-greenery-environment-ecology-wallpaper_103077-222.jpg?w=900) no-repeat fixed;*/
+    /*background: url(https://cutewallpaper.org/21/fjord-wallpapers/Download-1920x1080-Wallpaper-Fjord-Walls-Of-Milford-Sound-.jpg) no-repeat fixed;*/
+    /*background: url(https://www.fjords.com/wp-content/uploads/2021/09/norway_fjords_wallpaper_0001_naeroyfjord-2000x1200.jpg) no-repeat fixed;*/
+    /*background: url(https://cdna.artstation.com/p/assets/images/images/020/104/542/large/charlie-henson-dark-norway-01.jpg?1566386641) no-repeat fixed;*/
+    background-color: transparent;
 }
 
 
@@ -151,10 +147,12 @@ input[type=number] {
         user-select: none;
         margin-bottom: 3px;
         text-transform: uppercase;
+        /*color: rgba(255, 255, 255, 0.8);*/
     }
 
     .form-group input {
         font-size: 13px;
+        /*color: rgba(255, 255, 255, 0.8);*/
     }
 
 .text-danger {
@@ -172,11 +170,12 @@ input[type=number] {
     border-right: none;
     /*padding-left: 5px;*/
     transition: background-color 0.2s ease-out;
+    /*color: rgba(255, 255, 255, 0.8);*/
 }
 
     .form-control2:focus {
         /*background-color: transparent;*/
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.1);
         -webkit-box-shadow: none;
         box-shadow: none;
         outline: none !important;
@@ -326,7 +325,7 @@ input[type=number] {
 
     .newA:hover {
         cursor: pointer;
-        transform: scale(102%);
+        /*transform: scale(102%);*/
         transition: 0.2s ease-in-out;
         background-color: rgb(255, 255, 255, 0.8);
         /*border: 1px solid rgb(0, 100, 0, 0.3);*/

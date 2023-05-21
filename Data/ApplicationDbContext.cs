@@ -15,6 +15,7 @@ namespace Aurora.Data
         public DbSet<Aurora.Models.timeLength> timeLength { get; set; } = default!;
         public DbSet<Aurora.Models.AuroraModel2> AuroraModel2 { get; set; } = default!;
         public DbSet<Aurora.Models.Difficulty> Difficulty { get; set; } = default!;
+        public DbSet<Aurora.Models.AuroraModel3> AuroraModel3 { get; set; } = default!;
         
     }
 }

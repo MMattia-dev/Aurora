@@ -21,10 +21,7 @@
 <div class="newA_Parent">
     @foreach(var item in ((IEnumerable<AuroraModel2>)ViewBag.AuroraModel).OrderByDescending(x => x.Date))
     {
-        @*<div>@item.Description</div>*@
         <div class="newA" name="@item.Id">
-            @*<div>@item.Title</div>
-            <div>@item.Description</div>*@
             <div id="newA_Title">
                 <span>@item.Title</span>
                 <span>@item.Date.ToString("yyyy.MM.dd")</span>
@@ -32,13 +29,10 @@
             <div class="divider"></div>
             <div id="newA_Description"></div>
 
-            @*<div class="fader"></div>*@
-
             <div id="newA_City">
                 <div class="divider2"></div>
                 <span>@item.Place.Split('(')[0]</span>
             </div>
-
         </div>
     }
 </div>
